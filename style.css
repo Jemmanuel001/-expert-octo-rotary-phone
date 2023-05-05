@@ -1,0 +1,253 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+
+body{
+    background-image: url("test.jpg");
+    background-size: cover;
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+
+.lapse-container{
+    height: 30px;
+    width: 40px;
+    align-items: center;
+    background-color: transparent;
+    
+
+
+    
+    
+}
+
+.animationbg{
+    background: linear-gradient(-45deg, #526fee, #e6ff00,#23a6d5, #23d5ab, #ff5858);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    opacity: 100%;
+    z-index: -1;
+
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    border: 10px solid #fff;
+    height: 75%;
+    border-radius: 20px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 4px;
+
+
+  
+    
+}
+
+.out{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 15px solid white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.in{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.text{
+    color:#fff;
+    font-size: 23px;
+}
+
+.minute{
+    font-size: 40px;
+}
+
+.sec{
+    font-size: 37px;
+}
+
+.msec{
+    font-size: 37px;
+}
+
+.btnwrap{
+    width: 200px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin:8%;
+    
+
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: #000;
+    color:white;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background-color: #fff;
+    color:#000;
+}
+
+.lapse{
+    list-style: none;
+    color: #fff;
+    width:250px;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    margin-top: 30px;
+}
+
+.lapse::-webkit-scrollbar{
+    display:none;
+
+}
+
+.lapse-item{
+        display: block;
+        width: 25vh;
+        padding: 15px;
+        text-align: center;
+        border: px solid #444;
+        border-radius: 50px;
+        margin-bottom: 25px;
+        margin: 15px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.nmbr{
+    color:#fff;
+}
+
+.stamp{
+    display: inline-block;
+    margin-left: 25px;
+    
+
+}
+
+.clear  {
+  padding: 0.7em 7em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 5px;
+}
+
+.clear:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #00ff4c,
+    #ffdd00,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #06ffd5
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  animation: clear 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes clear {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.clear:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+
+.hidden{
+    visibility: hidden;
+}
